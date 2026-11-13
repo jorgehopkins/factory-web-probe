@@ -1,13 +1,16 @@
 {
-  "name": "factory-web-probe",
+  "name": "web-app",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "node src/server.js",
-    "test": "node --test \"test/**/*.test.js\""
+    "test": "vitest run"
   },
-  "dependencies": {
-    "@opentelemetry/api": "^1.9.0"
+  "devDependencies": {
+    "vitest": "3.2.4"
   }
 }
