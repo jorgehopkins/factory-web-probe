@@ -1,0 +1,32 @@
+# The Protected Paths the Software Factory enforces on this repository (ADR-0014, ADR-0036).
+# Written at Onboarding, for people and agents to read. The Factory enforces what the Project's Domain Pack tab
+# says, so change them there: an edit here changes nothing, and this file is itself protected.
+domainPack: web-app
+factory:
+  protect:
+    - .github/workflows/**
+    - .env*
+    - .factory/**
+    - AGENTS.md
+    - CLAUDE.md
+    - .claude/**
+    - docs/codebase-map/**
+  except:
+    - .env.example
+pack:
+  protect:
+    - "*.pem"
+    - "*.key"
+    - "*.p12"
+    - "*.pfx"
+    - id_rsa
+    - id_dsa
+    - id_ecdsa
+    - id_ed25519
+    - "**/.ssh/**"
+    - "**/secrets/**"
+    - .npmrc
+  except: []
+project:
+  protect: []
+  except: []
